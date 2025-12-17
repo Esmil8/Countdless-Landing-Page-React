@@ -34,7 +34,7 @@ Its main goal is to clearly present the value proposition and collect sign-ups t
 
 ---
 
-## 🌓 Dark Mode (Implementation)
+## 🌓 Dark Mode
 
 The global `darkMode` state is defined in `App.tsx` and passed down to components via props.  
 It also syncs with the `<body>` element using `useEffect`.
