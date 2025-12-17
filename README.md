@@ -39,3 +39,14 @@ Its main goal is to clearly present the value proposition and collect sign-ups t
 The global `darkMode` state is defined in `App.tsx` and passed down to components via props.  
 It also syncs with the `<body>` element using `useEffect`.
 
+
+## Add backend API Consumption
+
+--Fetch to Backend to save information 18/12/2025
+
+--CORS Configuration: Secure communication established between localhost:5173 (Frontend) and localhost:3000 (Backend).
+
+--Strict Typing: Integrate Typescript interface (SubmitResponse, UserEntity) to ensure data integry beetweet frontend and backend
+
+--API Endpoint: POST http://localhost:3000/coundless/submit
+

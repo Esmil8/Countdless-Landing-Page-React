@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import {submitForm, type SubmitResponse} from '../api/form.api'
 
 type FormProps = {
 
@@ -12,20 +13,33 @@ export default function Form1({darkMode}: FormProps) {
 
     const [isSend, setIsSend] = useState(false)
 
-    const HanddleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+
+    const HanddleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
         e.preventDefault()
 
-        console.log( 'Name', name)
-        console.log( 'Email', email)
+        try { 
+            
+            const res: SubmitResponse = await submitForm( {name, email})
 
-        setIsSend(true)
+            console.log("Complete respond since server", res);
+            
 
-        setTimeout(() => {
-            setIsSend(false)
-        },4000)
+            console.log( 'Name', name)
+            console.log( 'Email', email)
 
+            setIsSend(true)
+
+            setTimeout(() => {
+                setIsSend(false)
+            },4000)
+
+        }
+        catch (error) {
+
+            alert((error as Error).message)
     }
+}
     
 
 
@@ -75,4 +89,5 @@ export default function Form1({darkMode}: FormProps) {
 </section>
 
     )
+    
 }
