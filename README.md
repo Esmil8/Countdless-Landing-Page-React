@@ -48,5 +48,5 @@ It also syncs with the `<body>` element using `useEffect`.
 
 --Strict Typing: Integrate Typescript interface (SubmitResponse, UserEntity) to ensure data integry beetweet frontend and backend
 
---API Endpoint: POST http://localhost:3000/coundless/submit
+--API Endpoint: 
 
